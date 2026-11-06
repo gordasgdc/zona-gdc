@@ -1,47 +1,97 @@
 {
- "format": "zona_gdc_catalog_v1",
+ "format": "zona_gdc_catalog_v2",
  "size": 33,
  "params": {
-  "grey_band_stops": [
-   -0.4,
-   0.4
+  "map": "stop ladder",
+  "ladder_stops": [
+   -7,
+   7
   ],
-  "skin_band_stops": [
-   0.785,
-   1.452
-  ],
-  "high_stops": 2.474,
-  "deep_stops": -5.0,
-  "edge_stops": 0.3,
-  "top_code": 0.96875,
-  "strength": 0.92,
-  "colours": {
-   "deep": [
-    0.12,
-    0.28,
+  "ladder": {
+   "-7": [
+    0.3,
+    0.04,
+    0.55
+   ],
+   "-6": [
+    0.2,
+    0.1,
+    0.8
+   ],
+   "-5": [
+    0.1,
+    0.3,
     0.98
    ],
-   "grey": [
+   "-4": [
+    0.1,
+    0.58,
+    0.98
+   ],
+   "-3": [
+    0.05,
+    0.78,
+    0.88
+   ],
+   "-2": [
+    0.25,
+    0.86,
+    0.62
+   ],
+   "-1": [
+    0.6,
+    0.9,
+    0.8
+   ],
+   "0": [
     0.1,
     0.85,
     0.25
    ],
-   "skin": [
+   "1": [
     0.98,
     0.45,
     0.62
    ],
-   "high": [
+   "2": [
     1.0,
     0.86,
     0.1
    ],
-   "top": [
+   "3": [
     1.0,
-    0.05,
+    0.55,
     0.05
+   ],
+   "4": [
+    0.85,
+    0.1,
+    0.75
+   ],
+   "5": [
+    1.0,
+    0.95,
+    0.6
+   ],
+   "6": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "7": [
+    0.75,
+    1.0,
+    1.0
    ]
   },
+  "top_colour": [
+   1.0,
+   0.05,
+   0.05
+  ],
+  "edge_stops": 0.3,
+  "top_code": 0.96875,
+  "strength": 0.92,
   "comps": [
    0.0,
    0.5,
@@ -56,6 +106,7 @@
    "code": "SLog2-SG",
    "gamut": "S-Gamut",
    "curve": "slog2",
+   "resolved_floor_stops": -2.84,
    "files": [
     {
      "comp_stops": 0.0,
@@ -81,6 +132,7 @@
    "code": "SLog3-SG3C",
    "gamut": "S-Gamut3.Cine",
    "curve": "slog3",
+   "resolved_floor_stops": -4.23,
    "files": [
     {
      "comp_stops": 0.0,
@@ -106,6 +158,7 @@
    "code": "SLog3-SG3",
    "gamut": "S-Gamut3",
    "curve": "slog3",
+   "resolved_floor_stops": -4.23,
    "files": [
     {
      "comp_stops": 0.0,
@@ -131,6 +184,7 @@
    "code": "CLog-CG",
    "gamut": "Cinema Gamut",
    "curve": "clog",
+   "resolved_floor_stops": -1.59,
    "files": [
     {
      "comp_stops": 0.0,
@@ -156,6 +210,7 @@
    "code": "CLog2-CG",
    "gamut": "Cinema Gamut",
    "curve": "clog2",
+   "resolved_floor_stops": -3.42,
    "files": [
     {
      "comp_stops": 0.0,
@@ -181,6 +236,7 @@
    "code": "CLog3-CG",
    "gamut": "Cinema Gamut",
    "curve": "clog3",
+   "resolved_floor_stops": -1.7,
    "files": [
     {
      "comp_stops": 0.0,
@@ -206,6 +262,7 @@
    "code": "VLog-VG",
    "gamut": "V-Gamut",
    "curve": "vlog",
+   "resolved_floor_stops": -4.01,
    "files": [
     {
      "comp_stops": 0.0,
@@ -231,6 +288,7 @@
    "code": "LogC3-EI160",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei160",
+   "resolved_floor_stops": -3.2,
    "files": [
     {
      "comp_stops": 0.0,
@@ -256,6 +314,7 @@
    "code": "LogC3-EI200",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei200",
+   "resolved_floor_stops": -3.21,
    "files": [
     {
      "comp_stops": 0.0,
@@ -281,6 +340,7 @@
    "code": "LogC3-EI250",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei250",
+   "resolved_floor_stops": -3.22,
    "files": [
     {
      "comp_stops": 0.0,
@@ -306,6 +366,7 @@
    "code": "LogC3-EI320",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei320",
+   "resolved_floor_stops": -3.22,
    "files": [
     {
      "comp_stops": 0.0,
@@ -331,6 +392,7 @@
    "code": "LogC3-EI400",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei400",
+   "resolved_floor_stops": -3.23,
    "files": [
     {
      "comp_stops": 0.0,
@@ -356,6 +418,7 @@
    "code": "LogC3-EI500",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei500",
+   "resolved_floor_stops": -3.23,
    "files": [
     {
      "comp_stops": 0.0,
@@ -381,6 +444,7 @@
    "code": "LogC3-EI640",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei640",
+   "resolved_floor_stops": -3.94,
    "files": [
     {
      "comp_stops": 0.0,
@@ -406,6 +470,7 @@
    "code": "LogC3-EI800",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei800",
+   "resolved_floor_stops": -3.92,
    "files": [
     {
      "comp_stops": 0.0,
@@ -431,6 +496,7 @@
    "code": "LogC3-EI1000",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei1000",
+   "resolved_floor_stops": -3.91,
    "files": [
     {
      "comp_stops": 0.0,
@@ -456,6 +522,7 @@
    "code": "LogC3-EI1280",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei1280",
+   "resolved_floor_stops": -3.89,
    "files": [
     {
      "comp_stops": 0.0,
@@ -481,6 +548,7 @@
    "code": "LogC3-EI1600",
    "gamut": "ARRI Wide Gamut 3",
    "curve": "logc3_ei1600",
+   "resolved_floor_stops": -3.87,
    "files": [
     {
      "comp_stops": 0.0,
@@ -506,6 +574,7 @@
    "code": "LogC4-AWG4",
    "gamut": "ARRI Wide Gamut 4",
    "curve": "logc4",
+   "resolved_floor_stops": -1.84,
    "files": [
     {
      "comp_stops": 0.0,
@@ -531,6 +600,7 @@
    "code": "L3G10-RWG",
    "gamut": "REDWideGamutRGB",
    "curve": "log3g10",
+   "resolved_floor_stops": -2.71,
    "files": [
     {
      "comp_stops": 0.0,
@@ -556,6 +626,7 @@
    "code": "BMDGen5",
    "gamut": "Blackmagic Wide Gamut Gen5",
    "curve": "bmdgen5",
+   "resolved_floor_stops": -3.69,
    "files": [
     {
      "comp_stops": 0.0,
@@ -581,6 +652,7 @@
    "code": "NLog-NG",
    "gamut": "N-Gamut (Rec.2020 primaries)",
    "curve": "nlog",
+   "resolved_floor_stops": -2.43,
    "files": [
     {
      "comp_stops": 0.0,
@@ -606,6 +678,7 @@
    "code": "FLog-FG",
    "gamut": "F-Gamut (Rec.2020 primaries)",
    "curve": "flog",
+   "resolved_floor_stops": -3.58,
    "files": [
     {
      "comp_stops": 0.0,
@@ -631,6 +704,7 @@
    "code": "FLog2-FG",
    "gamut": "F-Gamut (Rec.2020 primaries)",
    "curve": "flog2",
+   "resolved_floor_stops": -3.43,
    "files": [
     {
      "comp_stops": 0.0,
@@ -656,6 +730,7 @@
    "code": "AppleLog",
    "gamut": "Rec.2020",
    "curve": "applelog",
+   "resolved_floor_stops": -3.94,
    "files": [
     {
      "comp_stops": 0.0,
@@ -681,6 +756,7 @@
    "code": "TLog-EG",
    "gamut": "E-Gamut",
    "curve": "tlog",
+   "resolved_floor_stops": -3.73,
    "files": [
     {
      "comp_stops": 0.0,
@@ -706,6 +782,7 @@
    "code": "DI-DWG",
    "gamut": "DaVinci Wide Gamut",
    "curve": "intermediate",
+   "resolved_floor_stops": -3.97,
    "files": [
     {
      "comp_stops": 0.0,
@@ -731,6 +808,7 @@
    "code": "ACEScct",
    "gamut": "ACES AP1",
    "curve": "acescct",
+   "resolved_floor_stops": -5.19,
    "files": [
     {
      "comp_stops": 0.0,

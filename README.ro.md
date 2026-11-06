@@ -6,38 +6,44 @@
 
 [![Licență: CC BY 4.0](https://img.shields.io/badge/licence-CC%20BY%204.0-blue-blue)](LICENSE)
 
-ZONA GDC este un set de LUT-uri `.cube` 33×33×33 **doar pentru monitorizare**. Se încarcă pe un monitor, vizor sau previzualizare de recorder extern care primește semnalul log al camerei; LUT-ul arată o imagine Rec.709 de *diagnostic*: luminanță monocromă cu benzi colorate la niveluri de expunere definite. Este un ajutor de expunere, **nu un look și nu o corecție de culoare**.
+ZONA GDC este un set de LUT-uri `.cube` 33×33×33 **doar pentru monitorizare**. Se încarcă pe un monitor, vizor sau previzualizare de recorder extern care primește semnalul log al camerei; LUT-ul arată o hartă *diagnostică* în fals-culori a expunerii de scenă, în trepte față de grey 18%. Este un ajutor de expunere, **nu un look și nu o corecție de culoare**.
 
 ## Contract
 - **Intrare:** profilul log din numele fișierului (ex. `VLog-VG` = V-Log / V-Gamut), full range, fără altă transformare aplicată.
-- **Ieșire:** imagine Rec.709 de diagnostic, codată cu OETF BT.709, full range. **Nu** este log → log (asta face ETTR GDC).
+- **Ieșire:** hartă diagnostică în fals-culori pentru monitor, full range, fără altă transformare. **Nu** este log → log (asta face ETTR GDC).
 - Aplică-l **o singură dată**. Dacă monitorul sau camera aplică deja un LUT/transformare, oprește-o, altfel ai dublă transformare.
 - Doar monitorizare: nu îl folosi pentru etalonare și nu îl „arde" intenționat în înregistrarea principală. Un `.cube` nu poate impune „doar monitor"; în funcție de rutarea dispozitivului, un LUT de monitorizare poate apărea și în ieșirile externe înregistrate — verifică dispozitivul.
 
 ## Ce înseamnă culorile
-Treptele se măsoară **după** compensarea de monitorizare, față de grey 18 % (`Y = luminanța semnalului scene-linear ÷ 2^comp`).
+Harta se calculează **direct din semnalul log al camerei**: fiecare canal e decodat în scene-linear cu curba profilului, luminanța se ia cu ponderile gamutului profilului, iar rezultatul e exprimat în **trepte față de grey 18% după compensarea de monitorizare**. Nu există conversie Rec.709, tone mapping sau tăiere înaintea analizei; culorile de ieșire sunt diagnostice și nu cer altă transformare.
 
-| Culoare | Semnificație | Interval |
-|---|---|---|
-| Roșu | capătul domeniului de cod al semnalului log **original** | orice canal cu cod ≥ 31/32 |
-| Galben | alb de display atins | peste +2,47 trepte (100 % semnal BT.709); nimic nu e comprimat |
-| Roz | referință **tonală** pentru piele | +0,79 … +1,45 trepte = 55–70 % semnal BT.709 (convenție de lucru, nu standard; nu detectează piele) |
-| Verde | nivel gri-card | −0,4 … +0,4 trepte = 35–48 % semnal BT.709 |
-| Albastru | umbre adânci | sub −5 trepte (≈ 2,5 % semnal BT.709) |
-| gri | restul | luminanță monocromă BT.709 (context) |
+O culoare pe treaptă întreagă (banda *n* = *n* ± 0,5 trepte). Aceeași scară pentru toate profilele — vezi imaginea legendei:
 
-Roz este doar un interval tonal: orice perete luminos sau cer din acel interval devine roz. „Galben" înseamnă că **imaginea de monitorizare** ar tăia; nu e o afirmație despre tăierea senzorului (nu se folosesc date de cameră). Roșul se evaluează pe codurile originale de intrare, deci avertismentul despre limita reală a semnalului nu dispare la compensare.
+| Trepte | Culoare | | Trepte | Culoare |
+|---|---|---|---|---|
+| ≥ +6,5 | cyan pal | | −1 | verde-cyan pal |
+| +6 | alb | | −2 | mentă |
+| +5 | galben pal | | −3 | cyan |
+| +4 | magenta | | −4 | azur |
+| +3 | portocaliu | | −5 | albastru |
+| +2 | galben | | −6 | indigo |
+| **+1** | **roz** — în jurul referinței tonale pentru piele (nivel tonal, nu detector de piele) | | ≤ −6,5 | violet |
+| **0** | **verde** — grey card | | | |
+
+Încă două marcaje: **gri închis** = sub domeniul pe care profilul îl poate rezolva pe o grilă 33³ (sau fără semnal utilizabil); **roșu** = codul log *original* e ≥ 31/32 pe orice canal — un nivel al codării, **nu** o tăiere a senzorului (limitele senzorului nu se pot deduce din numele curbei; marcajul roșu ignoră compensarea, deci nu dispare când întunecați imaginea).
 
 ## Compensare (nume fișier `…_MONITOR-<pas>EV.cube`)
 `0EV` analizează imaginea ca atare. `m1EV` o analizează după o întunecare de −1 treaptă: grey capturat la +1 treaptă cade pe referința de grey. La fel `m0_5EV` (−0,5) și `m1_5EV` (−1,5). Fără +0,5 EV în această versiune.
 
-## Precizie măsurată (33³, interpolat — vezi `INDEX.md`, `audit.json`)
-Auditul evaluează cubul **interpolat** (trilinear și tetraedric, rampe de 0,01 trepte) față de modelul analitic.
-- Poziția marginii benzii pe rampe neutre (gri): cel mai rău 0,18 trepte, tipic 0,06 trepte (tetraedric).
-- Benzile sunt înguste față de grilă: în banda de grey de 0,8 trepte culoarea atinge 55–85 % acoperire, în funcție de profil (restul e amestec cu imaginea monocromă). 4 profile cu acoperire minimă sau culori saturate nereprezentabile sunt **experimentale**: `LogC4_AWG4`, `Film-Gen5_BMD-WG-Gen5`, `DaVinci-Intermediate_DWG`, `ACEScct_AP1`.
-- Culori puternic saturate: marginile benzilor se pot deplasa cu mai multe trepte (cea mai rea culoare de test ≈ 7 trepte); cauza nu a fost investigată mai departe. Nu te baza pe marginile benzilor pentru obiecte foarte saturate.
-- Eroarea punctuală pe 8 biți este mare (până la ~100 de coduri) exact la marginile benzilor, fiindcă benzile au margini ascuțite iar grila e 33³; departe de margini e mică. Marginile se mișcă lin cu expunerea (nu s-a găsit flicker: 0,7 % din pixeli schimbă banda între cadre pe un clip în mișcare la −1 EV).
-- Netestat pe monitoare, vizoare sau recordere externe fizice. Pragurile exacte **nu sunt garantate** pe hardware netestat (dispozitivul poate reeșantiona, tăia sau folosi propria interpolare).
+## Limite măsurate (33³, interpolat — `INDEX.md`, `audit.json`)
+> **Avertisment — culori saturate.** Harta urmează *luminanța*. Obiectele foarte saturate (mai ales întunecate, dominant albastre) pot avea o margine de bandă decalată cu până la circa **1 treaptă**, iar în gamuturi largi un albastru saturat poate avea luminanță zero sau negativă și apare gri închis. Utilizarea de încredere: conținut neutru și de tip piele. Nu citiți cifrele de 0,2–0,4 trepte de la neutre ca precizie pentru culori saturate.
+
+- **Trepte întregi, nu jumătăți.** Nodurile grilei sunt la 0,3–0,55 trepte pe axa neutră, deci benzi de 0,5 trepte nu pot fi plasate fiabil pe un LUT 33³.
+- **Margini de bandă pe neutre** (cel mai rău caz pe 28 de profile și 4 compensări, rampe de 0,01 trepte): tetraedric ≤ 0,44 trepte, trilinear ≤ 0,29.
+- **Umbre.** Fiecare profil are un *prag rezolvat* (`INDEX.md`): între aprox. −1,6 și −5,2 trepte la 0 EV, distanța dintre noduri depășește 0,7 trepte și marginile nu pot fi plasate; zonele mai întunecate apar gri închis, niciodată într-o culoare greșită. Compensarea mută pragul cu același număr de trepte.
+- **Culori saturate** (64 de culori de test, decalajul local al marginii față de modelul analitic): 99 % din cazuri în 0,54 trepte în cel mai rău profil, ≤ 0,6 % peste 1 treaptă; cele mai mari valori ating fereastra de căutare de 1,5 trepte („cel puțin 1,5"). Nota anterioară „≈ 7 trepte" a fost un artefact de măsurare al auditului vechi (culori în afara domeniului, potrivire pe cea mai apropiată trecere) și este retrasă.
+- **Material real** (Panasonic V-Log, 50 fps, două clipuri, doar teste locale): vezi `CHANGELOG.md`.
+- Eroarea punctuală pe 8 biți e mare la marginile benzilor prin construcție. Netestat pe monitoare, vizoare sau recordere fizice; pragurile nu sunt garantate pe hardware care re-eșantionează sau folosește propria interpolare. Nu se pretinde echivalență cu vreun instrument nativ de expunere.
 
 ## Conținut
 28 de profile pe branduri (Sony, Canon, Panasonic, ARRI, RED, Blackmagic, Nikon, Fujifilm, Apple, FilmLight, DaVinci, ACES), câte 4 LUT-uri; `Sony/_Viewfinder_6char/` are copii cu nume scurt pentru vizoare cu nume de fișier de 6 caractere. `INDEX.csv/md`, `STATS.json`, `catalog.json`, `audit.json`, `MANIFEST_SHA256.txt`, imagini de legendă RO/EN/ES. Neincluse: GoPro Protune (fără sursă verificată pentru gamă).
