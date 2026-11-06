@@ -1,0 +1,754 @@
+{
+ "format": "zona_gdc_catalog_v1",
+ "size": 33,
+ "params": {
+  "grey_band_stops": [
+   -0.4,
+   0.4
+  ],
+  "skin_band_stops": [
+   0.785,
+   1.452
+  ],
+  "high_stops": 2.474,
+  "deep_stops": -5.0,
+  "edge_stops": 0.3,
+  "top_code": 0.96875,
+  "strength": 0.92,
+  "colours": {
+   "deep": [
+    0.12,
+    0.28,
+    0.98
+   ],
+   "grey": [
+    0.1,
+    0.85,
+    0.25
+   ],
+   "skin": [
+    0.98,
+    0.45,
+    0.62
+   ],
+   "high": [
+    1.0,
+    0.86,
+    0.1
+   ],
+   "top": [
+    1.0,
+    0.05,
+    0.05
+   ]
+  },
+  "comps": [
+   0.0,
+   0.5,
+   1.0,
+   1.5
+  ]
+ },
+ "profiles": [
+  {
+   "brand": "Sony",
+   "folder": "S-Log2_S-Gamut",
+   "code": "SLog2-SG",
+   "gamut": "S-Gamut",
+   "curve": "slog2",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Sony/S-Log2_S-Gamut/SLog2-SG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Sony/S-Log2_S-Gamut/SLog2-SG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Sony/S-Log2_S-Gamut/SLog2-SG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Sony/S-Log2_S-Gamut/SLog2-SG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Sony",
+   "folder": "S-Log3_S-Gamut3.Cine",
+   "code": "SLog3-SG3C",
+   "gamut": "S-Gamut3.Cine",
+   "curve": "slog3",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Sony/S-Log3_S-Gamut3.Cine/SLog3-SG3C_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Sony/S-Log3_S-Gamut3.Cine/SLog3-SG3C_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Sony/S-Log3_S-Gamut3.Cine/SLog3-SG3C_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Sony/S-Log3_S-Gamut3.Cine/SLog3-SG3C_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Sony",
+   "folder": "S-Log3_S-Gamut3",
+   "code": "SLog3-SG3",
+   "gamut": "S-Gamut3",
+   "curve": "slog3",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Sony/S-Log3_S-Gamut3/SLog3-SG3_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Sony/S-Log3_S-Gamut3/SLog3-SG3_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Sony/S-Log3_S-Gamut3/SLog3-SG3_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Sony/S-Log3_S-Gamut3/SLog3-SG3_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Canon",
+   "folder": "Canon-Log_Cinema-Gamut",
+   "code": "CLog-CG",
+   "gamut": "Cinema Gamut",
+   "curve": "clog",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Canon/Canon-Log_Cinema-Gamut/CLog-CG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Canon/Canon-Log_Cinema-Gamut/CLog-CG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Canon/Canon-Log_Cinema-Gamut/CLog-CG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Canon/Canon-Log_Cinema-Gamut/CLog-CG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Canon",
+   "folder": "Canon-Log2_Cinema-Gamut",
+   "code": "CLog2-CG",
+   "gamut": "Cinema Gamut",
+   "curve": "clog2",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Canon/Canon-Log2_Cinema-Gamut/CLog2-CG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Canon/Canon-Log2_Cinema-Gamut/CLog2-CG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Canon/Canon-Log2_Cinema-Gamut/CLog2-CG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Canon/Canon-Log2_Cinema-Gamut/CLog2-CG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Canon",
+   "folder": "Canon-Log3_Cinema-Gamut",
+   "code": "CLog3-CG",
+   "gamut": "Cinema Gamut",
+   "curve": "clog3",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Canon/Canon-Log3_Cinema-Gamut/CLog3-CG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Canon/Canon-Log3_Cinema-Gamut/CLog3-CG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Canon/Canon-Log3_Cinema-Gamut/CLog3-CG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Canon/Canon-Log3_Cinema-Gamut/CLog3-CG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Panasonic",
+   "folder": "V-Log_V-Gamut",
+   "code": "VLog-VG",
+   "gamut": "V-Gamut",
+   "curve": "vlog",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Panasonic/V-Log_V-Gamut/VLog-VG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Panasonic/V-Log_V-Gamut/VLog-VG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Panasonic/V-Log_V-Gamut/VLog-VG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Panasonic/V-Log_V-Gamut/VLog-VG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0160",
+   "code": "LogC3-EI160",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei160",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0160/LogC3-EI160_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0160/LogC3-EI160_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0160/LogC3-EI160_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0160/LogC3-EI160_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0200",
+   "code": "LogC3-EI200",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei200",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0200/LogC3-EI200_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0200/LogC3-EI200_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0200/LogC3-EI200_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0200/LogC3-EI200_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0250",
+   "code": "LogC3-EI250",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei250",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0250/LogC3-EI250_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0250/LogC3-EI250_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0250/LogC3-EI250_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0250/LogC3-EI250_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0320",
+   "code": "LogC3-EI320",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei320",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0320/LogC3-EI320_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0320/LogC3-EI320_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0320/LogC3-EI320_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0320/LogC3-EI320_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0400",
+   "code": "LogC3-EI400",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei400",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0400/LogC3-EI400_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0400/LogC3-EI400_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0400/LogC3-EI400_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0400/LogC3-EI400_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0500",
+   "code": "LogC3-EI500",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei500",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0500/LogC3-EI500_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0500/LogC3-EI500_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0500/LogC3-EI500_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0500/LogC3-EI500_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0640",
+   "code": "LogC3-EI640",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei640",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0640/LogC3-EI640_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0640/LogC3-EI640_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0640/LogC3-EI640_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0640/LogC3-EI640_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI0800",
+   "code": "LogC3-EI800",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei800",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI0800/LogC3-EI800_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI0800/LogC3-EI800_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI0800/LogC3-EI800_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI0800/LogC3-EI800_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI1000",
+   "code": "LogC3-EI1000",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei1000",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI1000/LogC3-EI1000_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI1000/LogC3-EI1000_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI1000/LogC3-EI1000_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI1000/LogC3-EI1000_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI1280",
+   "code": "LogC3-EI1280",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei1280",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI1280/LogC3-EI1280_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI1280/LogC3-EI1280_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI1280/LogC3-EI1280_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI1280/LogC3-EI1280_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC3_AWG3_EI1600",
+   "code": "LogC3-EI1600",
+   "gamut": "ARRI Wide Gamut 3",
+   "curve": "logc3_ei1600",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC3_AWG3_EI1600/LogC3-EI1600_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC3_AWG3_EI1600/LogC3-EI1600_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC3_AWG3_EI1600/LogC3-EI1600_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC3_AWG3_EI1600/LogC3-EI1600_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ARRI",
+   "folder": "LogC4_AWG4",
+   "code": "LogC4-AWG4",
+   "gamut": "ARRI Wide Gamut 4",
+   "curve": "logc4",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ARRI/LogC4_AWG4/LogC4-AWG4_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ARRI/LogC4_AWG4/LogC4-AWG4_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ARRI/LogC4_AWG4/LogC4-AWG4_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ARRI/LogC4_AWG4/LogC4-AWG4_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "RED",
+   "folder": "Log3G10_REDWideGamutRGB",
+   "code": "L3G10-RWG",
+   "gamut": "REDWideGamutRGB",
+   "curve": "log3g10",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "RED/Log3G10_REDWideGamutRGB/L3G10-RWG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "RED/Log3G10_REDWideGamutRGB/L3G10-RWG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "RED/Log3G10_REDWideGamutRGB/L3G10-RWG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "RED/Log3G10_REDWideGamutRGB/L3G10-RWG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Blackmagic",
+   "folder": "Film-Gen5_BMD-WG-Gen5",
+   "code": "BMDGen5",
+   "gamut": "Blackmagic Wide Gamut Gen5",
+   "curve": "bmdgen5",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Blackmagic/Film-Gen5_BMD-WG-Gen5/BMDGen5_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Blackmagic/Film-Gen5_BMD-WG-Gen5/BMDGen5_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Blackmagic/Film-Gen5_BMD-WG-Gen5/BMDGen5_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Blackmagic/Film-Gen5_BMD-WG-Gen5/BMDGen5_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Nikon",
+   "folder": "N-Log_N-Gamut",
+   "code": "NLog-NG",
+   "gamut": "N-Gamut (Rec.2020 primaries)",
+   "curve": "nlog",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Nikon/N-Log_N-Gamut/NLog-NG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Nikon/N-Log_N-Gamut/NLog-NG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Nikon/N-Log_N-Gamut/NLog-NG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Nikon/N-Log_N-Gamut/NLog-NG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Fujifilm",
+   "folder": "F-Log_F-Gamut",
+   "code": "FLog-FG",
+   "gamut": "F-Gamut (Rec.2020 primaries)",
+   "curve": "flog",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Fujifilm/F-Log_F-Gamut/FLog-FG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Fujifilm/F-Log_F-Gamut/FLog-FG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Fujifilm/F-Log_F-Gamut/FLog-FG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Fujifilm/F-Log_F-Gamut/FLog-FG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Fujifilm",
+   "folder": "F-Log2_F-Gamut",
+   "code": "FLog2-FG",
+   "gamut": "F-Gamut (Rec.2020 primaries)",
+   "curve": "flog2",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Fujifilm/F-Log2_F-Gamut/FLog2-FG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Fujifilm/F-Log2_F-Gamut/FLog2-FG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Fujifilm/F-Log2_F-Gamut/FLog2-FG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Fujifilm/F-Log2_F-Gamut/FLog2-FG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "Apple",
+   "folder": "Apple-Log_Rec2020",
+   "code": "AppleLog",
+   "gamut": "Rec.2020",
+   "curve": "applelog",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "Apple/Apple-Log_Rec2020/AppleLog_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "Apple/Apple-Log_Rec2020/AppleLog_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "Apple/Apple-Log_Rec2020/AppleLog_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "Apple/Apple-Log_Rec2020/AppleLog_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "FilmLight",
+   "folder": "T-Log_E-Gamut",
+   "code": "TLog-EG",
+   "gamut": "E-Gamut",
+   "curve": "tlog",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "FilmLight/T-Log_E-Gamut/TLog-EG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "FilmLight/T-Log_E-Gamut/TLog-EG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "FilmLight/T-Log_E-Gamut/TLog-EG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "FilmLight/T-Log_E-Gamut/TLog-EG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "DaVinci",
+   "folder": "DaVinci-Intermediate_DWG",
+   "code": "DI-DWG",
+   "gamut": "DaVinci Wide Gamut",
+   "curve": "intermediate",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "DaVinci/DaVinci-Intermediate_DWG/DI-DWG_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "DaVinci/DaVinci-Intermediate_DWG/DI-DWG_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "DaVinci/DaVinci-Intermediate_DWG/DI-DWG_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "DaVinci/DaVinci-Intermediate_DWG/DI-DWG_MONITOR-m1_5EV.cube"
+    }
+   ]
+  },
+  {
+   "brand": "ACES",
+   "folder": "ACEScct_AP1",
+   "code": "ACEScct",
+   "gamut": "ACES AP1",
+   "curve": "acescct",
+   "files": [
+    {
+     "comp_stops": 0.0,
+     "file": "ACES/ACEScct_AP1/ACEScct_MONITOR-0EV.cube"
+    },
+    {
+     "comp_stops": 0.5,
+     "file": "ACES/ACEScct_AP1/ACEScct_MONITOR-m0_5EV.cube"
+    },
+    {
+     "comp_stops": 1.0,
+     "file": "ACES/ACEScct_AP1/ACEScct_MONITOR-m1EV.cube"
+    },
+    {
+     "comp_stops": 1.5,
+     "file": "ACES/ACEScct_AP1/ACEScct_MONITOR-m1_5EV.cube"
+    }
+   ]
+  }
+ ]
+}

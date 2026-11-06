@@ -1,0 +1,9 @@
+{
+ "profiles": 28,
+ "luts_in_profile_folders": 112,
+ "viewfinder_6char_copies": 12,
+ "total_cube_files": 124,
+ "verified_profiles": 24,
+ "experimental_profiles": 4,
+ "worst_neutral_edge_err_stops_tetra": 0.18
+}
